@@ -27,6 +27,9 @@ const AddCategory = ({ setCategories }) => {
         type='text'
         value={ inputValue }
         onChange={ handleInputChange }
+        autoComplete="off"
+        placeholder="Find a gif..."
+        autoFocus="on"
       />
     </form>
   )

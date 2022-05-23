@@ -1,46 +1,36 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import AddCategory from './components/AddCategory';
 import { GifGrid } from './components/GifGrid';
 
-const GifExpertApp = () => {
+const GifExpertApp = ({ defaultCategories = [] }) => {
 
-  const [categories, setCategories] = useState(['One Punch']);
-
-  // const handleAdd = (category) => {
-  //   // Crear la función para agregar un nuevo elemento, ejemplo HunterXHunter
-  //   // setCategories(['HunterXHunter', ...categories]);
-  //   // setCategories(cats => [...cats, 'HunterXHunter']);
-  //   setCategories(categories.concat(category)); 
-  // }
+  const [categories, setCategories] = useState(defaultCategories);
 
   return (
-    <>
-      <h2>GifExpertApp</h2>
-      <AddCategory setCategories={ setCategories }/>
-      <hr />
+    <div className="container">
+      <div className='row'>
+        <div className='col-6'>
+          <h1 className="text-gradient">Search all the Gifs</h1>
+          <AddCategory setCategories={ setCategories }/>
+        </div>
+      </div>
 
-      <ol>
-        {
-          categories.map((category) => (
-            <GifGrid 
-            key={ category }
-            category={ category }
+      <div className='row'>
+        <div className='col-12'>
+          {
+            categories.map((category) => (
+              <GifGrid
+                key={category}
+                category={category}
 
-            />
-          ))
-        }
-      </ol>
-    </>
+              />
+            ))
+          }
+          
+        </div>
+      </div>
+    </div>
   );
-}
-
-GifExpertApp.propTypes = {
-
-}
-
-GifExpertApp.defaultProps = {
-
 }
 
 export default GifExpertApp;

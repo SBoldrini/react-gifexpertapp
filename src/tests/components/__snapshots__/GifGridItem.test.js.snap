@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba del componente <GifGridItem /> Debe renderizar correctamente el componente <GifGridItem /> 1`] = `
+<div
+  className="card animate__animated animate__fadeIn"
+>
+  <img
+    alt="One Punch Man Bubblegum GIF"
+    src="https://punchman.gif"
+  />
+  <p>
+    One Punch Man Bubblegum GIF
+  </p>
+</div>
+`;
+
+exports[`Prueba en el componente <GifGridItem /> Debe renderizar correctamente el componente <GifGridItem /> 1`] = `
+<div
+  className="card animate__animated animate__fadeIn"
+>
+  <img
+    alt="One Punch Man Bubblegum GIF"
+    src="https://punchman.gif"
+  />
+  <p>
+    One Punch Man Bubblegum GIF
+  </p>
+</div>
+`;
